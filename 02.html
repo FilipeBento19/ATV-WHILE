@@ -6,9 +6,18 @@
     */
 
     //ENTRADA
-   
+    let user = prompt(`Qual o seu usuario?`).toString();
+    let password = prompt(`Escolha uma senha`).toString();
 
     //PROCESSAMENTO
+    while (user == password) {
+        alert(`Erro: Voce colocou a senha igual ao nome de usuario`);
+        user = prompt(`Qual o seu usuario?`).toString();
+        password = prompt(`Escolha uma senha`).toString();
+        
+    }
+
+    document.write(`Tá certo`);
 
 
     //SAÍDA
