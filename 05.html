@@ -5,12 +5,16 @@
     Faça um programa que receba uma senha formada de quatro números inteiros, verifique se a senha está correta e, caso não esteja, solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem “Senha Correta”, caso contrário, “Senha Incorreta”.
     */
 
-    //ENTRADA
+    let senhaCorreta = prompt('Insira uma senha de 4 números inteiros:').trim();
+    while (senhaCorreta.length != 4 || isNaN(senhaCorreta)) {
+        senhaCorreta = prompt('Insira uma senha de 4 números inteiros:').trim();
+    };
 
+    let senha = prompt('Insira a senha:').trim();
+    while (senha != senhaCorreta) {
+        senha = prompt('Insira a senha:').trim();
+    };
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    alert("senha correta");
 
 </script>

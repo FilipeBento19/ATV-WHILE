@@ -1,0 +1,28 @@
+<script>
+    // Problema: Fibonacci
+    /*
+    Pergunta ao usuário quantos números da sequência de Fibonacci deseja obter,
+    usando a estrutura de repetição while.
+    */
+
+    let numero = Number(prompt("Quantos números da sequência de Fibonacci deseja?"));
+
+    while (isNaN(numero) || numero <= 0) {
+        numero = Number(prompt("Digite um número inteiro positivo:"));
+    };
+
+    let a = 0;
+    let b = 1;
+    let contador = 0;
+    let sequencia = [];
+  
+    while (contador < numero) {
+        sequencia.push(a);
+        let proximo = a + b;
+        a = b;
+        b = proximo;
+        contador++;
+    };
+
+    alert(`Sequência: \n` + sequencia.join(" - "));
+</script>
